@@ -1,9 +1,12 @@
 # MVP work record
 
-The architecture and design palette are in the repository. The first implementation milestone is the accessible overlap factsheet. Its delivery has not started.
+Milestone 1 has a running comparison page and downloadable PDF factsheets for three synthetic fund pairs. Chrome generates the fixture PDFs ahead of time from the same analytics module as the page. This prototype tests tagged output before choosing the production rendering engine.
 
-| Task | State | Owner | Dependency | Acceptance |
-|---|---|---|---|---|
-| M1-01 | Ready | software_developer | None | Load the synthetic two-fund fixture from the architecture, compute 25% overlap, identify X as its sole contributor, and verify the result with a repeatable test. |
+| Task | State | Evidence |
+|---|---|---|
+| M1-01 · Calculate overlap | Complete | Four automated tests pass, including 25% entirely attributable to X, duplicate positions, partial disclosures, cash exclusions and invalid snapshots. |
+| M1-02 · Show accessible holdings evidence | Implemented | Production browser checks verified the keyboard skip link, all three pair selections, percentage updates and no document overflow at 375px. |
+| M1-03 · Export tagged PDFs | Implemented | Three successful downloads, each one US Letter page with tagged headings, tables, source and date. PDF tags and reading-order text inspected after correcting the headline. |
+| M1-04 · Verify accessibility with assistive technology | Ready for QA | Run formal PDF/UA validation and manual screen-reader checks on the web and PDF. Verify title, percentage, contributor, source and table header navigation. Record any fixes before marking milestone 1 complete. |
 
-After M1-01, the task planner assigns the next slice toward accessible HTML and PDF. The parent session records the active task, evidence, open decisions and next owner here. [Milestones and exit criteria](architecture-etf-reports/architecture-etf-reports.md)
+[Architecture and milestone exit criteria](architecture-etf-reports/architecture-etf-reports.md)

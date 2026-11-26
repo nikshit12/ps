@@ -1,0 +1,48 @@
+@import "../../design/colors.css";
+* {box-sizing:border-box}
+html {font-family:Arial,Helvetica,sans-serif;color:var(--text);background:var(--canvas);font-size:16px}
+body {margin:0}
+a,select {color:var(--link)}
+:focus-visible {outline:3px solid var(--focus);outline-offset:4px}
+.skip {position:absolute;left:1rem;top:-5rem;background:var(--canvas);padding:.75rem}
+.skip:focus {top:1rem}
+.top {border-bottom:1px solid var(--divider);display:flex;align-items:center;justify-content:space-between;padding:1rem max(5vw,calc((100vw - 1080px)/2));gap:1rem;white-space:nowrap}
+.brand {display:flex;align-items:center;gap:.55rem;font-weight:700;letter-spacing:-.04em;font-size:1.12rem}
+.brand i {font-style:normal;font-size:1.55rem}
+.top>span,small,caption,.kicker,.labels,.sources {color:var(--text-secondary)}
+main {max-width:1130px;padding:3.8rem 25px;margin:auto}
+.heading,.controls {display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.heading {justify-content:space-between;margin-bottom:2rem}
+h1,h2,p {margin:0}
+h1 {font-family:Georgia,serif;font-weight:400;font-size:clamp(2.65rem,5vw,4.8rem);line-height:1.1;letter-spacing:-.055em}
+.kicker {font-size:.78rem;letter-spacing:.06em;margin-bottom:.75rem}
+.download {background:var(--primary);color:var(--on-primary);padding:.85rem 1.05rem;border-radius:7px;text-decoration:none;font-weight:600}
+.download span {margin-left:.5rem}
+.controls {padding:1rem 0;border-top:1px solid var(--divider);border-bottom:1px solid var(--divider);font-size:.875rem}
+select {max-width:100%;background:var(--canvas);color:var(--text);border:1px solid var(--control-border);border-radius:5px;padding:.6rem;font:inherit}
+.controls small {margin-left:auto}
+.overview {display:grid;grid-template-columns:1fr 1.2fr;background:var(--surface);margin:2rem 0 3rem;border-radius:10px}
+.metric,.distribution {padding:clamp(1.3rem,3vw,2.4rem)}
+.metric {border-right:1px solid var(--divider)}
+h2 {font-weight:600;font-size:1.25rem;letter-spacing:-.025em}
+.metric strong {display:block;font-family:Georgia,serif;font-size:clamp(4rem,7vw,7rem);letter-spacing:-.075em;font-weight:400;line-height:1.2}
+.metric p,.sources p {line-height:1.55}
+.metric a {display:inline-block;margin-top:1rem}
+.plot {margin:1.1rem 0}
+.plot-title {font-size:.9rem;font-weight:600}
+.bar {display:flex;height:18px;gap:2px;margin:.45rem 0;overflow:hidden;border-radius:3px}
+.shared {background:var(--series-a)}
+.other {background:repeating-linear-gradient(135deg,var(--secondary) 0 3px,var(--control-border) 3px 4px)}
+.labels {display:flex;gap:1rem;font-size:.8rem}
+small {line-height:1.5}
+.scroll {overflow-x:auto}
+table {border-collapse:collapse;width:100%;margin-top:.4rem;font-variant-numeric:tabular-nums}
+caption {text-align:left;font-size:.86rem;margin:.35rem 0 1rem}
+th,td {text-align:right;padding:.85rem .65rem;border-bottom:1px solid var(--divider)}
+th:first-child {text-align:left}
+thead {background:var(--surface);font-size:.85rem}
+tfoot {font-weight:600}
+.sources {line-height:1.55;margin-top:2.3rem;font-size:.88rem}
+.sources h2 {color:var(--text);margin-bottom:.5rem}
+.sources ul {padding-left:1.25rem}
+@media(max-width:700px){main{padding:2rem 1rem}.overview{grid-template-columns:1fr}.metric{border-right:0;border-bottom:1px solid var(--divider)}.controls small{margin-left:0}.top>span{font-size:.8rem}th,td{padding:.7rem .35rem}}
