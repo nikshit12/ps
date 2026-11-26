@@ -1,0 +1,31 @@
+/* Shared editor and report tokens. Each pair is light, dark.
+   Set data-theme on the document root for a saved user preference. */
+:root {
+  color-scheme: light dark;
+
+  --canvas: light-dark(#ffffff, #171717);
+  --surface: light-dark(#f6f6f5, #222222);
+  --text: light-dark(#202020, #f1f1ef);
+  --text-secondary: light-dark(#595959, #b9b9b6);
+  --primary: light-dark(#202020, #eeeeec);
+  --on-primary: light-dark(#ffffff, #171717);
+  --secondary: light-dark(#eaeae8, #343434);
+  --on-secondary: light-dark(#282828, #eeeeec);
+  --divider: light-dark(#dededc, #414141);
+  --control-border: light-dark(#767676, #909090);
+  --focus: light-dark(#165abb, #88baff);
+  --link: light-dark(#165abb, #88baff);
+  --positive: light-dark(#186347, #78d4ad);
+  --negative: light-dark(#a5313c, #ffa0a6);
+  --warning: light-dark(#774b09, #efc37c);
+  --series-a: light-dark(#2357a4, #8cb8ff);
+  --series-b: light-dark(#854b86, #e1a5de);
+}
+
+:root[data-theme="light"] { color-scheme: light; }
+:root[data-theme="dark"] { color-scheme: dark; }
+
+/* The export worker resolves these tokens to light sRGB literals for print. */
+@media print {
+  :root, :root[data-theme] { color-scheme: light; }
+}
